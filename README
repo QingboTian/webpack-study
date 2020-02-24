@@ -1,4 +1,4 @@
-1. 项目初始化 `npm init -y`
+1. 项目初始化 npm init -y
 2. 安装项目需要的依赖 npm i jquery -S
 3. 在JS文件中进行依赖的导入
 4. 使用webpack进行解析执行 webpack [输入源] -o  [输出源] 
@@ -21,3 +21,15 @@
 安装CSS驱动 npm i style-loader css-loader -D
 安装LESS驱动 npm i less-loader -D                  npm i less -D
 安装URL驱动 npm i url-loader file-loader -D
+
+安装Babel 将高级ES语法转为浏览器可以执行的语法 babel新版本安装方法
+    npm i @babel-core babel-loader @babel-plugin-transform-runtime @babel/runtime -D
+    npm i @babel/preset-env @babel/plugin-proposal-class-properties -D
+    根目录创建.babelrc文件 内容在文件内查看
+
+npm 卸载命令
+    npm un [包名]
+
+安装Vue npm i vue -S 
+安装Vue loader
+    npm install vue-loader vue-template-compiler -D

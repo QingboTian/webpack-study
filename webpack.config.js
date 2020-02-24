@@ -1,4 +1,5 @@
 const path = require('path')
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
     mode: "development",// 开发环境
@@ -59,6 +60,7 @@ module.exports = {
                     },
                 ]
             },
+            // 处理字体
             {
                 test : /\.(ttf|eot|svg|woff|woff2)$/,// 正则匹配导入文件后缀名
                 use : [// 使用什么加载器
@@ -67,6 +69,33 @@ module.exports = {
                     },
                 ]
             },
+            // 处理高级ES语法
+            {
+                test : /\.js$/,// 正则匹配导入文件后缀名
+                use : [// 使用什么加载器
+                    {
+                        loader: 'babel-loader',
+                    },
+                ],
+                exclude : /node_modules/
+            },
+            // VUE
+            {
+                test : /\.vue$/,// 正则匹配导入文件后缀名
+                use : [// 使用什么加载器
+                    {
+                        loader: 'vue-loader',
+                    },
+                ]
+            },
         ]
-    }
+    },
+    resolve : {
+        alias: {
+            "vue$" : "vue/dist/vue.js"
+        }
+    },
+    plugins:[
+       new VueLoaderPlugin(),
+    ],
 }

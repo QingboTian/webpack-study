@@ -6,16 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<script src="/bundle.js"></script>
+
 <body>
     <div id="container" class="container">
        我是文本 
+       {{msg}}
+       <login></login>
     </div>
 </body>
-<script>
-    // var app = new Vue({
-    //     el : "#container",
-        
-    // })
-</script>
+<!-- 放到最后进行引入否则出现元素获取不到的情况 -->
+<script src="/bundle.js"></script>
 </html>

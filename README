@@ -1,4 +1,4 @@
-1. 项目初始化 npm init -y
+1. 项目初始化 `npm init -y`
 2. 安装项目需要的依赖 npm i jquery -S
 3. 在JS文件中进行依赖的导入
 4. 使用webpack进行解析执行 webpack [输入源] -o  [输出源] 

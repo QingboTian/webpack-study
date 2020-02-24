@@ -1,0 +1,23 @@
+1. 项目初始化 npm init -y
+2. 安装项目需要的依赖 npm i jquery -S
+3. 在JS文件中进行依赖的导入
+4. 使用webpack进行解析执行 webpack [输入源] -o  [输出源] 
+    webpack4需要添加-o参数
+5. HTML中进行JS的引入
+    引入的应该是输出源的JS文件
+6. 每次使用 webpack [输入源] -o  [输出源] 比较麻烦
+    创建webpack配置文件，在项目的根路径下 webpack.config.js
+7. 现在每次修改后还是得使用webpack命令 还是比较麻烦
+8. 现在需要每次修改后自动编译 安装webpack-dev-server
+    npm i webpack-dev-server -D
+9. 现在还不可以运行 需要在本地再安装一次webpack
+    npm i webpack -D
+10. 在package.json文件的scripts处添加如下内容
+    "dev" : "webpack-dev-server"
+11. 执行npm run dev
+
+12. 这里注意 生成的bundle.js没有存放到实际的物理磁盘中 而是放在了内存中 访问时和根目录平级
+
+安装CSS驱动 npm i style-loader css-loader -D
+安装LESS驱动 npm i less-loader -D                  npm i less -D
+安装URL驱动 npm i url-loader file-loader -D
